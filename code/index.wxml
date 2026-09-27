@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="title">银发照妖镜</view>
+  <view class="subtitle">拍下保健品宣传图，AI帮您识破陷阱</view>
+
+  <button class="btn" hover-class="btn-hover" bindtap="chooseImage">
+    拍照 / 选图
+  </button>
+
+  <view wx:if="{{imagePath}}" class="preview">
+    <image src="{{imagePath}}" mode="widthFix"></image>
+  </view>
+
+  <button class="btn analyze" hover-class="btn-hover"
+          bindtap="analyzeImage"
+          disabled="{{!imagePath || loading}}">
+    开始分析
+  </button>
+
+  <view wx:if="{{loading}}" class="loading">AI正在分析，请稍候...</view>
+
+  <view wx:if="{{errorMsg}}" class="error">
+    ⚠️ {{errorMsg}}
+  </view>
+
+  <view wx:if="{{result}}" class="result">
+    <view class="result-title">分析结果：</view>
+    <view class="result-text">{{result}}</view>
+  </view>
+</view>
