@@ -1,0 +1,128 @@
+page {
+  background: #FDF9F3;
+}
+
+.container {
+  padding: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #E67E22;
+  margin-bottom: 20rpx;
+}
+
+.subtitle {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 40rpx;
+  text-align: center;
+}
+
+.btn {
+  width: 80%;
+  margin-top: 30rpx;
+  font-size: 40rpx;
+  background-color: #E67E22;
+  color: #FFFFFF;
+  border-radius: 50rpx;
+}
+
+.btn::after { border: none; }
+
+.btn[disabled] {
+  background-color: #CCCCCC !important;
+  color: #FFFFFF !important;
+}
+
+.btn-hover {
+  opacity: 0.85;
+  transform: scale(0.98);
+}
+
+.analyze {
+  background-color: #27AE60;
+}
+
+.preview {
+  width: 100%;
+  margin-top: 30rpx;
+}
+
+.preview image {
+  width: 100%;
+  border-radius: 20rpx;
+  display: block;
+}
+
+.loading {
+  margin-top: 30rpx;
+  font-size: 32rpx;
+  color: #E67E22;
+  display: flex;
+  align-items: center;
+}
+
+.loading::before {
+  content: '';
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 16rpx;
+  border: 4rpx solid #FFE0B2;
+  border-top-color: #E67E22;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error {
+  margin-top: 40rpx;
+  padding: 30rpx;
+  background: #FFEBEE;
+  color: #C0392B;
+  border-radius: 20rpx;
+  width: 90%;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  line-height: 1.6;
+  border-left: 8rpx solid #C0392B;
+}
+
+.result {
+  margin-top: 40rpx;
+  padding: 30rpx;
+  background-color: #FFF8E1;
+  border-radius: 20rpx;
+  width: 90%;
+  box-sizing: border-box;
+  border-left: 8rpx solid #E67E22;
+  animation: fadeInUp 0.4s ease-out;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20rpx); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.result-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #E67E22;
+  margin-bottom: 15rpx;
+}
+
+.result-text {
+  font-size: 34rpx;
+  color: #333;
+  line-height: 1.8;
+  letter-spacing: 1rpx;
+}
